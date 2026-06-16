@@ -601,3 +601,4 @@ if (typeof setLanguage === "function" && !window.__jocelynFullFixApplied) {
   };
   window.__jocelynFullFixApplied = true;
   setLanguage(localStorage.getItem("portfolioLanguage") || "en");
+}
