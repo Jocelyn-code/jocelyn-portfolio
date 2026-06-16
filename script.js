@@ -461,7 +461,7 @@ translations["heroTitlePart1"] = {
 };
 
 translations["heroTitlePart2"] = {
-  en: "clarity, care, and character.",
+  en: " clarity, care, and character.",
 es: " claridad, dedicación y personalidad."};
 translations["heroP1"] = {"en": "I design and build websites by listening closely, noticing the small details, and turning someone's idea into something they can actually feel proud of.", "es": "Diseño y desarrollo páginas web escuchando con atención, cuidando los pequeños detalles y convirtiendo las ideas de las personas en algo de lo que realmente puedan sentirse orgullosas."};
 translations["heroP2"] = {"en": "My style is creative, honest, and values-driven. I care about clear communication, accessibility, and making a website feel like the person or dream behind it.", "es": "Mi estilo es creativo, auténtico y guiado por valores. Me importa la comunicación clara, la accesibilidad y que cada página refleje a la persona o el sueño que hay detrás."};
