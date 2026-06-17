@@ -410,9 +410,14 @@ function setLanguage(language) {
       language === "en" ? "Switch to Spanish" : "Cambiar a inglés"
     );
   }
-}
-if (mobileLanguageToggle) {
-  mobileLanguageToggle.textContent = language === "en" ? "Español" : "English";
+
+  if (mobileLanguageToggle) {
+    mobileLanguageToggle.textContent = language === "en" ? "Español" : "English";
+    mobileLanguageToggle.setAttribute(
+      "aria-label",
+      language === "en" ? "Switch to Spanish" : "Cambiar a inglés"
+    );
+  }
 }
 
 if (languageToggle) {
@@ -434,7 +439,6 @@ if (mobileLanguageToggle) {
 }
 
 setLanguage(localStorage.getItem("portfolioLanguage") || "en");
-
 
 // Final bilingual copy fixes: full Mexican Spanish translation pass
 translations["heroTitleNew"] = {"en": "Thoughtful websites built with clarity, care, and character.", "es": "Páginas web creadas con claridad, dedicación y personalidad."};
