@@ -383,6 +383,7 @@ const placeholderTranslations = {
 };
 
 const languageToggle = document.getElementById("languageToggle");
+const mobileLanguageToggle = document.getElementById("mobileLanguageToggle");
 
 function setLanguage(language) {
   document.documentElement.lang = language;
@@ -410,11 +411,25 @@ function setLanguage(language) {
     );
   }
 }
+if (mobileLanguageToggle) {
+  mobileLanguageToggle.textContent = language === "en" ? "Español" : "English";
+}
 
 if (languageToggle) {
   languageToggle.addEventListener("click", () => {
     const currentLanguage = localStorage.getItem("portfolioLanguage") || "en";
     setLanguage(currentLanguage === "en" ? "es" : "en");
+  });
+}
+
+if (mobileLanguageToggle) {
+  mobileLanguageToggle.addEventListener("click", () => {
+    const currentLanguage = localStorage.getItem("portfolioLanguage") || "en";
+    setLanguage(currentLanguage === "en" ? "es" : "en");
+
+    if (navLinks) {
+      navLinks.classList.remove("open");
+    }
   });
 }
 
@@ -602,4 +617,3 @@ if (typeof setLanguage === "function" && !window.__jocelynFullFixApplied) {
   window.__jocelynFullFixApplied = true;
   setLanguage(localStorage.getItem("portfolioLanguage") || "en");
 }
-
